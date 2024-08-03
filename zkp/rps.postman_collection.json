@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "c19d736e-3464-42c2-9e3f-f6e08b6082bc",
+		"name": "rps",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10724208"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/tool/r",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/tool/r",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tool",
+						"r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/tool/commitment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/commitment/my_commitment_tool",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"commitment",
+						"my_commitment_tool"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

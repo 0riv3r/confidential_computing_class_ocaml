@@ -1,0 +1,33 @@
+(lang dune 3.12)
+
+(name ocaml_he)
+
+(generate_opam_files true)
+
+(source
+ (github "0riv3r/ocaml_learn"))
+
+(authors "Ofer Rivlin <ofer.rivlin@gmail.com>")
+
+(maintainers "Ofer Rivlin <ofer.rivlin@gmail.com>")
+
+(license LICENSE)
+
+(documentation https://url/to/documentation)
+
+; require for debugging the code
+; from:
+; https://github.com/ocamllabs/vscode-ocaml-platform#debugging-ocaml-programs-experimental
+; https://github.com/hackwaly/ocamlearlybird
+
+(map_workspace_root false)
+
+(package
+ (name ocaml_he)
+ (synopsis "A short synopsis")
+ (description "A longer description")
+ (depends ocaml dune)
+ (tags
+  (topics "to describe" your project)))
+
+; See the complete stanza docs at https://dune.readthedocs.io/en/stable/dune-files.html#dune-project

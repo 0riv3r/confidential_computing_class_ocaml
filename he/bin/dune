@@ -1,0 +1,13 @@
+(executables
+ (public_names ocaml_he_paillier ocaml_he_rsa)
+ (names he_paillier_main he_rsa_main)
+ (modes byte exe)
+ (libraries he_libs))
+
+; debugger requires the bytecode .bc type of executable file
+; I added the (modes byte exe) line.
+; https://dune.readthedocs.io/en/stable/dune-files.html#linking-modes
+; https://dune.readthedocs.io/en/stable/quick-start.html
+; https://github.com/ocamllabs/vscode-ocaml-platform#debugging-ocaml-programs-experimental
+; executables config resources:
+; https://discuss.ocaml.org/t/dune-question-two-executables-sharing-a-module/9826/4

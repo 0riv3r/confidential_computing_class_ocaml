@@ -1,0 +1,6 @@
+(executables
+ (public_names rps_game rps_server rps_client)
+ (names rps_main server_main client_main)
+ ; (link_flags 'unix.cma' -cclib -lunix)
+ (modes byte exe)
+ (libraries rps_lib))

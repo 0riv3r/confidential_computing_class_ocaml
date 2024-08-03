@@ -1,0 +1,28 @@
+(env
+ (dev
+  (flags
+   (:standard -w -27 -w -32))))
+
+;https://stackoverflow.com/questions/57120927/how-to-disable-error-warning-66-unused-open-in-dune
+;https://dune.readthedocs.io/en/stable/faq.html?highlight=warning%20flags#how-to-make-warnings-non-fatal
+
+; The dune FAQ explains how to configure warnings so that they are "non-fatal" (letting the build proceed). However, this will still leave the warnings cluttering your build output. For developers using the open! Foo idiom to establish the context, this is annoying. The best solution is just to selectively disable this warning for the project:
+
+;     Create a dune file at the root of your project
+
+;     Add the following stanza
+
+;     (env
+;       (dev
+;         (flags (:standard -w -66))))
+
+; This stanza instructs dune to pass the -w flag with the -66 argument to the OCaml compiler when building under the dev profile. man ocamlc explains how this flag works:
+
+;        -w warning-list
+;           Enable, disable, or mark as fatal the warnings specified by the argument warning-list.
+;           ...
+;           -num   Disable warning number num.
+;           ...
+;           The warning numbers are as follows.
+;           ...
+;           66   Unused open! statement.

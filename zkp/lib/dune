@@ -1,0 +1,12 @@
+(library
+ (name rps_lib)
+ (libraries
+  tiny_httpd
+  cohttp
+  cohttp-lwt-unix
+  conduit-lwt
+  lwt.unix
+  lwt
+  logs
+  logs.lwt
+  nocoiner))
